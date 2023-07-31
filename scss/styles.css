@@ -78,7 +78,8 @@ body {
 
 main {
   gap: 2rem;
-  padding: 5rem;
+  padding: 2rem;
+  padding-top: 5rem;
 }
 
 footer {
@@ -226,19 +227,23 @@ footer {
   }
 }
 @media (max-width: 860px) {
+  main {
+    gap: 1rem;
+    padding: 1rem;
+    padding-top: 5rem;
+  }
   .container-card {
     flex-wrap: wrap;
     position: inherit;
   }
-  .card {
-    margin: 1rem;
-  }
   .card img {
-    display: none;
+    width: 100%;
+    height: 210px;
+    text-align: center;
   }
   .container-grid {
-    padding: 1rem;
-    gap: 1rem;
+    padding: 1.5rem;
+    gap: 1.5rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
@@ -246,57 +251,14 @@ footer {
   .checkbtn {
     display: block;
   }
-  ul {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    background: rgba(26, 1, 1, 0.637);
-    top: 80px;
-    left: -100%;
-    text-align: center;
-    transition: all 0.5s;
-    z-index: 20;
-  }
-  nav ul li {
-    display: block;
-    margin: 3rem 0;
-    line-height: 3rem;
-  }
-  nav ul li a {
-    font-size: 1rem;
-  }
-  li a:hover, li a.active {
-    background: none;
-    color: red;
-  }
   #check:checked ~ ul {
     left: 0;
   }
-}
-@media (max-width: 576px) {
-  .container-card {
-    display: flex;
-    flex-wrap: wrap;
-    position: inherit;
+  nav {
+    background-image: radial-gradient(circle at right top, rgba(19, 3, 110, 0.8078431373), #212529, #037409);
   }
-  .card {
-    margin: 0.5rem;
-  }
-  .card img {
-    display: none;
-  }
-  .container-grid {
-    padding: 0.5rem;
-    gap: 0.5rem;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-  }
-  .checkbtn {
-    display: block;
-  }
-  ul {
-    position: fixed;
+  nav ul {
+    position: absolute;
     width: 100%;
     height: 100vh;
     background: rgba(14, 17, 51, 0.8);
@@ -312,11 +274,44 @@ footer {
     line-height: 3rem;
   }
   nav ul li a {
-    font-size: 1rem;
     color: #ffffff;
+    font-size: 1rem;
+    padding: 0.5rem 0.8rem;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
   }
-  li a:hover, li a.active {
-    background: none;
+  nav ul li a.active, nav ul li a:hover {
+    color: #ffffff;
+    background: #0000ff;
+    transition: 1.5s;
+    box-shadow: 10px 10px 30px rgba(96, 248, 7, 0.4588235294);
+  }
+}
+@media (max-width: 576px) {
+  main {
+    gap: 2rem;
+    padding: 0.5rem;
+    padding-top: 5rem;
+    padding-left: 0;
+  }
+  .container-card {
+    display: flex;
+    flex-wrap: wrap;
+    position: inherit;
+  }
+  .card img {
+    display: none;
+  }
+  .container-grid {
+    padding: 2rem;
+    gap: 0rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .checkbtn {
+    display: block;
   }
   #check:checked ~ ul {
     left: 0;
