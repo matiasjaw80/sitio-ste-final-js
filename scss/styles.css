@@ -1,0 +1,324 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+/*Color o Imagen Body*/
+/*Colores Menu */
+/*Colores Menu Mobile*/
+/*Colores Tarjetas */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+nav {
+  background-image: radial-gradient(circle at right top, rgba(0, 0, 0, 0.0901960784), #212529, #0e3d7a);
+}
+nav ul {
+  float: right;
+  margin-right: 1rem;
+}
+nav ul li {
+  display: inline-block;
+  line-height: 5rem;
+  margin: 0 0.1rem;
+}
+nav ul li a {
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+nav ul li a.active, nav ul li a:hover {
+  color: #ffffff;
+  background: #0000ff;
+  transition: 1.5s;
+  box-shadow: 10px 10px 30px rgba(96, 248, 7, 0.4588235294);
+}
+
+.enlace {
+  position: absolute;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  height: 4rem;
+}
+
+.checkbtn {
+  font-size: 2rem;
+  color: #ffffff;
+  float: right;
+  line-height: 5rem;
+  margin-right: 2.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+header {
+  position: fixed;
+  z-index: 10;
+  height: 5rem;
+  width: 100%;
+}
+
+body {
+  --opacidad-negro: 0.5;
+  background-color: #212529;
+  background-image: radial-gradient(ellipse at top, #212529, transparent), radial-gradient(ellipse at bottom, #000000, transparent);
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+
+main {
+  gap: 2rem;
+  padding: 5rem;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.container-grid {
+  padding: 1rem;
+  gap: 1rem;
+  display: grid;
+  min-height: min-content;
+  max-height: max-content;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.container-card {
+  width: 100%;
+  display: flex;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.title-cards {
+  width: 100%;
+  max-width: 1080px;
+  margin: auto;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+  color: #fff;
+  transition-property: all;
+  transition-duration: 1s;
+  transition-delay: 0s;
+  transition-timing-function: cubic-bezier(0.73, -0.17, 0.8, 1.44);
+  transition: all 1s 0s cubic-bezier(0.73, -0.17, 0.8, 1.44);
+}
+
+.title-cards:hover {
+  width: 90%;
+  background-color: #001aff;
+  color: TituloTarjeta;
+  border-radius: 1rem;
+}
+
+/***************************/
+.card {
+  width: 100%;
+  margin: 1rem;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #000000;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+  transition: all 400ms ease-out;
+  cursor: default;
+}
+.card:hover {
+  box-shadow: 10px 10px 30px rgba(96, 248, 7, 0.4588235294);
+  transform: translateY(-3%);
+}
+.card img {
+  width: 100%;
+  height: 210px;
+}
+.card .contenido-card {
+  padding: 15px;
+  text-align: center;
+}
+.card .contenido-card h3 {
+  margin-bottom: 15px;
+  color: #fff;
+  text-shadow: -6px 8px 10px rgb(127, 255, 7);
+}
+.card .contenido-card table {
+  color: #fff;
+  border-color: #28c928;
+}
+.card .contenido-card p {
+  line-height: 1.8;
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.card .contenido-card a {
+  display: inline-block;
+  padding: 10px;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #2fb4cc;
+  border: 1px solid #09ee09;
+  border-radius: 4px;
+  transition: all 400ms ease;
+  margin-bottom: 5px;
+}
+.card .contenido-card a:hover {
+  background: #09ee09;
+  color: #000000;
+}
+
+.logoredes {
+  height: 3rem;
+}
+.logoredes :hover {
+  transition: 0.5s;
+  transform: scale(1.5, 1.5);
+}
+
+.BarraLateral {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 9;
+}
+.BarraLateral :hover {
+  transition: 0.5s;
+  transform: scale(1.5, 1.5);
+}
+
+.slide-top {
+  -webkit-animation: slide-top 3s cubic-bezier(0.55, 0.085, 0.68, 0.53) 0.2s infinite alternate-reverse forwards;
+  animation: slide-top 3s cubic-bezier(0.55, 0.085, 0.68, 0.53) 0.2s infinite alternate-reverse forwards;
+}
+
+/*animation slide-top*/
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px);
+  }
+}
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px);
+  }
+}
+@media (max-width: 860px) {
+  .container-card {
+    flex-wrap: wrap;
+    position: inherit;
+  }
+  .card {
+    margin: 1rem;
+  }
+  .card img {
+    display: none;
+  }
+  .container-grid {
+    padding: 1rem;
+    gap: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+  .checkbtn {
+    display: block;
+  }
+  ul {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: rgba(26, 1, 1, 0.637);
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+    z-index: 20;
+  }
+  nav ul li {
+    display: block;
+    margin: 3rem 0;
+    line-height: 3rem;
+  }
+  nav ul li a {
+    font-size: 1rem;
+  }
+  li a:hover, li a.active {
+    background: none;
+    color: red;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+}
+@media (max-width: 576px) {
+  .container-card {
+    display: flex;
+    flex-wrap: wrap;
+    position: inherit;
+  }
+  .card {
+    margin: 0.5rem;
+  }
+  .card img {
+    display: none;
+  }
+  .container-grid {
+    padding: 0.5rem;
+    gap: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  .checkbtn {
+    display: block;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(14, 17, 51, 0.8);
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+    z-index: 20;
+  }
+  nav ul li {
+    display: block;
+    margin: 3rem 0;
+    line-height: 3rem;
+  }
+  nav ul li a {
+    font-size: 1rem;
+    color: #ffffff;
+  }
+  li a:hover, li a.active {
+    background: none;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+}/*# sourceMappingURL=styles.css.map */

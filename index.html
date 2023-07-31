@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Home</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+	<link rel="stylesheet" href="./scss/styles.css">
+   
+</head>
+
+<body>
+<header>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+  
+        </label>
+        <a href="./index.html" calss="enlace">
+            <img src="./img/logo.png" alt="logo" class="logo">
+        </a>
+        <ul>
+            <li><a class="active" href="./index.html">HOME</a></li>
+            <li><a href="./pages/Nostros.html">NOSOTROS</a></li>
+            <li><a href="./pages/Servicios.html">SERVICIOS</a></li>
+            <li><a href="./pages/Catalogo.html">CATALOGO</a></li>
+            <li><a href="./pages/Contacto.html">CONTACTO</a></li>
+        </ul> 
+      </nav>
+</header>
+
+<main class="animate__animated animate__pulse">
+    <!--   Carrousel-->
+    <div>
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./img/Slide01.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="./img/Slide02.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="./img/Slide03.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+
+    </div>
+    <!--   Fin Carrousel-->
+
+
+    <!--   Tarjetas-->
+    <div class="title-cards">
+            <h1>Al Servicio de Nuestros Clientes</h1>
+    </div>
+
+    <div class="container-card">
+        <div class="card">
+            <figure>
+                <img src="./img/imagen01.png">
+            </figure>
+            <div class="contenido-card">
+                <h3>Compromiso</h3>
+                <p>Nuestro compromiso es su tranquilidad Nos preocupamos por brindarles soluciones efectivas a sus necesidades. Creemos firmemente que el avance de su empresa debe ir acompañado de una infraestructura informática segura y escalable. </p>
+                <a href="./pages/Nostros.html">Leer Más</a>
+            </div>
+        </div>
+        <div class="card">
+            <figure>
+                <img src="./img/imagen04.png">
+            </figure>
+            <div class="contenido-card">
+                <h3>Servicios</h3>
+                <p>Todo nuestro trabajo está enfocado en la automatización de procesos que garanticen la estabilidad en el funcionamiento de su sistema y la seguridad en el almacenamiento de sus datos.</p>
+                <a href="./pages/Servicios.html">Leer Más</a>
+            </div>
+        </div>
+        <div class="card">
+            <figure>
+                <img src="./img/imagen03.png">
+            </figure>
+            <div class="contenido-card">
+                <h3>¿Por qué elegirnos? </h3>
+                <p>✓ Somos oportunos en la prestación del servicio, respondiendo de forma rápida en sitio a sus solicitudes y emergencias.</p>
+                <p>✓ Nuestro trabajo es realizado únicamente por profesionales y técnicos calificados. </p>
+                <p>✓ Cuando sea necesario podemos programar nuestro trabajo fuera del horario normal para que su negocio no pare.</p>
+                <p>✓ Ofrecemos un abanico completo de soluciones informáticas para la asesoría hasta la entrega de proyectos.</p>
+                <p>✓ Nos preocupamos realmente por brindarle soluciones que satisfagan todas sus necesidades.</p>
+                <p>✓ Le brindamos nuestro servicio al cliente especializado que va desde la asesoría hasta la entrega del proyecto.</p>
+                <a href="./pages/Contacto.html">Leer Más</a>
+            </div>
+        </div>
+
+    </div>
+    <!--Fin   Tarjetas-->
+
+</main>
+
+<div class="BarraLateral slide-top">
+    <a href="https://api.whatsapp.com/send?phone=5493462541444&text=Hola,%20necesito%20contactarme%20con%20ustedes">
+    <img src="./img/whatsapp.png" alt="ayuda">
+    </a>          
+</div>
+
+<footer>
+    <nav>
+        <div class="logoredes">
+            <a href="https://www.instagram.com/matiasjaw80/" calss="enlace">
+                <img src="./img/redes-instagram.png" alt="logo" class="logoredes">
+            </a>
+            <a href="https://www.facebook.com/matiasw80" calss="enlaceredes">
+                <img src="./img/redes-facebook.png" alt="logo" class="logoredes">
+            </a>
+            <a href="https://www.linkedin.com/in/matias-werjman/" calss="enlaceredes">
+                <img src="./img/redes-linkedin.png" alt="logo" class="logoredes">
+            </a>
+        </div>
+    </nav>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+<script>
+    AOS.init();
+</script>
+  
+</body>
+</html>

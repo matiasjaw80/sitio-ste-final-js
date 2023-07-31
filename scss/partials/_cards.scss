@@ -1,0 +1,108 @@
+.container-grid {
+    padding: 1rem;
+    gap: 1rem;
+    display: grid;
+    min-height: min-content;
+    max-height: max-content;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+.container-card {
+  width: 100%;
+  display: flex;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.title-cards {
+  width: 100%;
+  max-width: 1080px;
+  margin: auto;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+  color: $TituloTarjeta;
+
+
+  transition-property: all;
+  transition-duration: 1s;
+  transition-delay: 0s;
+  transition-timing-function: cubic-bezier(.73,-0.17,.8,1.44);
+
+  transition: all 1s 0s cubic-bezier(.73,-0.17,.8,1.44);
+
+}
+
+.title-cards:hover {
+  width: 90%;
+  background-color: $FondoHoverTitulo;
+  color: TituloTarjeta;
+  border-radius: 1rem;
+}
+
+
+/***************************/
+.card {
+  width: 100%;
+  margin: 1rem;
+  border-radius: 6px;
+  overflow: hidden;
+  background: $FondoTarjeta;
+  box-shadow: $SombraTarjeta;
+  transition: all 400ms ease-out;
+  cursor: default;
+
+  &:hover {
+    box-shadow: $SombraHoverTarjeta;
+    transform: translateY(-3%);
+  }
+  
+  & img {
+    width: 100%;
+    height: 210px;
+  }
+
+
+
+  & .contenido-card {
+    padding: 15px;
+    text-align: center;
+
+    & h3 {
+      margin-bottom: 15px;
+      color: $SubtituloTarjeta;
+      text-shadow: $SombraSubtituloTarjeta;
+    }
+
+    & table {
+      color: $TextoTablaTarjeta;
+      border-color: $BordesTablaTarjeta;
+      
+    }
+
+    & p {
+      line-height: 1.8;
+      color: $ParrafoTarjeta;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    & a {
+      display: inline-block;
+      padding: 10px;
+      margin-top: 10px;
+      text-decoration: none;
+      color: $BotonFondoTarjeta;
+      border: 1px solid $BotonBordeTarjeta;
+      border-radius: 4px;
+      transition: all 400ms ease;
+      margin-bottom: 5px;
+    }
+
+    & a:hover {
+      background: $BotonHoverFondoTarjeta;
+      color: $BotonHoverTextoTarjeta;
+    }
+  }
+}

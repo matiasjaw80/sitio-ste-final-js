@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+/*Color o Imagen Body*/
+$FondoBody: #212529;
+$FondoDegradeBody: radial-gradient(ellipse at top, #212529, transparent), radial-gradient(ellipse at bottom, #000000, transparent);;
+$FondoImagenBody: linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))), url("../img/fondo00.jpeg");
+
+/*Colores Menu */
+$FondoMenu: #00000017;
+$FondoImagenMenu: radial-gradient(circle at right top, #00000017, #212529, #0e3d7a);
+$TextoBotonesMenu: #ffffff;
+$FondoBotonActivadoMenu: #0000ff;
+$TextoBotonesActivadoMenu: #ffffff;
+$transicionBotonMenu: 1.5s;
+
+
+
+/*Colores Menu Mobile*/
+$Boton3rayitas: #ffffff;
+$FondoMenuMobile:#0e1133cc;
+$TextoMenuMobile: #ffffff;
+
+/*Colores Tarjetas */
+$TituloTarjeta: #fff;
+$SombraTituloTarjeta: -6px 8px 10px rgb(127, 255, 7);
+$FondoTarjeta: #000000;
+$SombraTarjeta: 0px 1px 10px #00000033;
+
+$SombraHoverTarjeta: 10px 10px 30px #60f80775;
+$FondoHoverTitulo: #001aff;
+
+$SubtituloTarjeta: #fff;
+$SombraSubtituloTarjeta: -6px 8px 10px rgb(127, 255, 7);
+
+$ParrafoTarjeta: #fff;
+$BordesTablaTarjeta: #28c928;
+$TextoTablaTarjeta: #fff;
+
+
+$BotonFondoTarjeta: #2fb4cc;
+$BotonBordeTarjeta: #09ee09;
+$BotonHoverFondoTarjeta:  #09ee09;
+$BotonHoverTextoTarjeta: #000000;;
+
+
+

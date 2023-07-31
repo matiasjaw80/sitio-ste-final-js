@@ -1,0 +1,111 @@
+@media (max-width: 860px){
+	.container-card{
+		flex-wrap: wrap;
+        position: inherit;
+	}
+	.card{
+		margin: 1rem;
+	}
+
+    .card img{
+        display: none;
+    }
+
+	.container-grid{
+		padding: 1rem;
+		gap: 1rem;
+		display: grid; 
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto;
+	}
+	.checkbtn{
+	    	display: block;
+	}
+  	ul{
+	    position: absolute;
+	    width: 100%;
+	    height: 100vh;
+	    background: rgba(26, 1, 1, 0.637);
+	    top: 80px;
+	    left: -100%;
+	    text-align: center;
+	    transition: all .5s;
+	    z-index: 20 ;
+  	}
+
+  	nav ul li{
+	    display: block;
+	    margin: 3rem 0;
+	    line-height: 3rem;
+    
+  	}
+
+  	nav ul li a{
+    		font-size: 1rem;
+  	}
+
+	li a:hover, li a.active{
+	    background: none;
+	    color: red;
+  	}
+  	#check:checked ~ ul{
+    		left:0;
+  	}
+}
+
+@media (max-width: 576px){
+        .container-card{
+            display: flex;
+            flex-wrap: wrap;
+            position: inherit;
+        }
+        .card{
+            margin: 0.5rem;
+        }
+
+        .card img{
+            display: none;
+        }
+
+        .container-grid{
+	        padding: 0.5rem;
+	        gap: 0.5rem;
+	        display: grid; 
+	        grid-template-columns: 1fr;
+	        grid-template-rows: auto;
+        }
+        .checkbtn{
+        	display: block;
+        }
+        ul{
+            position:fixed;
+            width: 100%;
+            height: 100vh;
+            background: $FondoMenuMobile;
+            top: 80px;
+            left: -100%;
+            text-align: center;
+            transition: all .5s;
+            z-index: 20 ;
+        }
+
+        nav ul li{
+            display: block;
+            margin: 3rem 0;
+            line-height: 3rem;
+            
+        }
+
+        nav ul li a{
+            font-size: 1rem;
+			color: $TextoMenuMobile;
+        }
+
+        li a:hover, li a.active{
+            background: none;
+ 
+        }
+        #check:checked ~ ul{
+            left:0;
+        }
+}
