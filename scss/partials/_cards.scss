@@ -1,26 +1,44 @@
+
+/*Contenedores*/
 .container-grid {
-    padding: 1rem;
-    gap: 1rem;
-    display: grid;
-    min-height: min-content;
-    max-height: max-content;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
+  height: 100vh;
+  padding: 1rem;
+  display: grid;
+  height: auto;
+  
+	grid-column-gap: 1rem;
+  
+  grid-template-columns:  1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  grid-template-areas: 
+      "Box01  Box02    Box03"
+      "Box01  Box04    Box05";
+}
+
+.container-grid > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
 
 .container-card {
   width: 100%;
   display: flex;
   max-width: 1100px;
   margin: auto;
+  
+
 }
 
+/*Elementos Tarjetas*/
 .title-cards {
   width: 100%;
   max-width: 1080px;
   margin: auto;
-  padding: 20px;
-  margin-top: 20px;
+  padding: 1.2rem;
+  margin-top: 1.2rem;
   text-align: center;
   color: $TituloTarjeta;
 
@@ -41,12 +59,10 @@
   border-radius: 1rem;
 }
 
-
-/***************************/
 .card {
   width: 100%;
   margin: 1rem;
-  border-radius: 6px;
+  border-radius: 0.5rem;
   overflow: hidden;
   background: $FondoTarjeta;
   box-shadow: $SombraTarjeta;
@@ -60,19 +76,18 @@
   
   & img {
     width: 100%;
-    height: 210px;
+    height: 291px;
   }
 
-
-
-  & .contenido-card {
-    padding: 15px;
+    & .contenido-card {
+    padding: 0.8rem;
     text-align: center;
 
     & h3 {
-      margin-bottom: 15px;
+      margin-bottom: 1rem;
       color: $SubtituloTarjeta;
       text-shadow: $SombraSubtituloTarjeta;
+      font-size: 1.5rem;
     }
 
     & table {
@@ -82,22 +97,22 @@
     }
 
     & p {
-      line-height: 1.8;
+      line-height: 1.2rem;
       color: $ParrafoTarjeta;
-      font-size: 14px;
-      margin-bottom: 5px;
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
     }
 
     & a {
       display: inline-block;
-      padding: 10px;
-      margin-top: 10px;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
       text-decoration: none;
       color: $BotonFondoTarjeta;
       border: 1px solid $BotonBordeTarjeta;
-      border-radius: 4px;
+      border-radius: 0.8rem;
       transition: all 400ms ease;
-      margin-bottom: 5px;
+      margin-bottom: 0.5rem;
     }
 
     & a:hover {
@@ -105,4 +120,33 @@
       color: $BotonHoverTextoTarjeta;
     }
   }
+}
+
+
+/*Card ciclos*/
+
+
+
+@for $numero from 1 through 5 {
+
+  .Box0#{$numero} {
+      grid-area: Box0#{$numero};
+  }
+
+}
+
+@each $cualquierCosa, $colorDeBox in $coloresBox {
+
+  .Box-#{$cualquierCosa} {
+      background-color: $colorDeBox;
+  }
+
+}
+
+@each $colorDeFondo in Color01, Color02, Color03, Color04, Color05 {
+
+  .Box-#{$colorDeFondo} {
+      background-color: $colorDeFondo;
+  }
+
 }
