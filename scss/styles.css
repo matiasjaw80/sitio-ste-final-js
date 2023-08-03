@@ -92,26 +92,26 @@ footer {
 /*Contenedores*/
 .container-grid {
   height: 100vh;
-  padding: 1rem;
-  display: grid;
+  display: grid; /*de que forma se visualiza*/
+  padding: 1rem; /*Relleno*/
   height: auto;
-  grid-column-gap: 1rem;
+  grid-column-gap: 1rem; /*espacio entre columnas*/
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas: "Box01  Box02    Box03" "Box01  Box04    Box05";
 }
 
 .container-grid > * {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: auto;
+  display: flex; /*de que forma se visualiza*/
+  justify-content: center; /*Contenido Justificado*/
+  align-items: center;
 }
 
 .container-card {
   width: 100%;
-  display: flex;
   max-width: 1100px;
+  display: flex;
   margin: auto;
 }
 
@@ -120,8 +120,8 @@ footer {
   width: 100%;
   max-width: 1080px;
   margin: auto;
-  padding: 1.2rem;
   margin-top: 1.2rem;
+  padding: 1.2rem;
   text-align: center;
   color: #fff;
   transition-property: all;
@@ -129,6 +129,13 @@ footer {
   transition-delay: 0s;
   transition-timing-function: cubic-bezier(0.73, -0.17, 0.8, 1.44);
   transition: all 1s 0s cubic-bezier(0.73, -0.17, 0.8, 1.44);
+}
+
+.video {
+  width: 500px;
+  aspect-ratio: 16/9;
+  border-radius: 1rem;
+  align-items: center;
 }
 
 .title-cards:hover {
@@ -141,11 +148,11 @@ footer {
 .card {
   width: 100%;
   margin: 1rem;
-  border-radius: 0.5rem;
-  overflow: hidden;
   background: #000000;
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
   transition: all 400ms ease-out;
+  overflow: hidden;
   cursor: default;
 }
 .card:hover {
@@ -155,6 +162,7 @@ footer {
 .card img {
   width: 100%;
   height: 291px;
+  border-radius: 1.5rem;
 }
 .card .contenido-card {
   padding: 0.8rem;

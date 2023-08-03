@@ -1,34 +1,34 @@
 
 /*Contenedores*/
 .container-grid {
-  height: 100vh;
-  padding: 1rem;
-  display: grid;
-  height: auto;
+  height: 100vh; 
+  display: grid; /*de que forma se visualiza*/
+
+  padding: 1rem; /*Relleno*/
+  height: auto; 
   
-	grid-column-gap: 1rem;
-  
+	grid-column-gap: 1rem; /*espacio entre columnas*/
   grid-template-columns:  1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-
   grid-template-areas: 
       "Box01  Box02    Box03"
       "Box01  Box04    Box05";
 }
 
 .container-grid > * {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: auto;
+  display: flex; /*de que forma se visualiza*/
+  
+  justify-content: center; /*Contenido Justificado*/
+  align-items: center; 
 }
 
 .container-card {
   width: 100%;
-  display: flex;
   max-width: 1100px;
+
+  display: flex;
   margin: auto;
-  
 
 }
 
@@ -36,12 +36,14 @@
 .title-cards {
   width: 100%;
   max-width: 1080px;
-  margin: auto;
-  padding: 1.2rem;
-  margin-top: 1.2rem;
-  text-align: center;
-  color: $TituloTarjeta;
 
+  margin: auto;
+  margin-top: 1.2rem;
+
+  padding: 1.2rem;
+  text-align: center;
+
+  color: $TituloTarjeta;
 
   transition-property: all;
   transition-duration: 1s;
@@ -50,6 +52,13 @@
 
   transition: all 1s 0s cubic-bezier(.73,-0.17,.8,1.44);
 
+}
+
+.video{
+  width: 500px;
+  aspect-ratio: 16/9;
+  border-radius: 1rem;
+  align-items: center;
 }
 
 .title-cards:hover {
@@ -62,11 +71,14 @@
 .card {
   width: 100%;
   margin: 1rem;
-  border-radius: 0.5rem;
-  overflow: hidden;
+
   background: $FondoTarjeta;
   box-shadow: $SombraTarjeta;
+
+  border-radius: 0.5rem;
   transition: all 400ms ease-out;
+
+  overflow: hidden;
   cursor: default;
 
   &:hover {
@@ -77,6 +89,7 @@
   & img {
     width: 100%;
     height: 291px;
+    border-radius: 1.5rem;
   }
 
     & .contenido-card {
