@@ -17,13 +17,15 @@ $transicionBotonMenu: 1.5s;
 $Boton3rayitas: #ffffff;
 $FondoMenuMobile:#0e1133cc;
 $TextoMenuMobile: #ffffff;
-$FondoImagenMenuMobile: radial-gradient(circle at right top, #13036ece, #212529, #037409);
+$FondoImagenMenuMobile: radial-gradient(circle at right top, #c3ec50, #212529, #037409);
 
 /*Colores Tarjetas */
 $TituloTarjeta: #fff;
-$SombraTituloTarjeta: -6px 8px 10px rgb(127, 255, 7);
+$SombraTituloTarjeta: -6px 8px 10px #7fff07;
 $FondoTarjeta: #000000;
 $SombraTarjeta: 0px 1px 10px #00000033;
+$BordeTarjeta: #09ee0934;
+
 
 $SombraHoverTarjeta: 10px 10px 30px #60f80775;
 $FondoHoverTitulo: #001aff;
@@ -51,9 +53,29 @@ $coloresBox: (
     Color05: #b211c423,
 );
 
-@mixin Relleno($direction, $justify) {
+/*Otras Variables de Tarjetas*/
 
-}
+/*Titulos Tarjetas*/
+$TamanoTextotarjtas: 1rem;
+$AnchoTituloTarjetas: 100%;
+$AnchoTituloHoverTarjetas: 90%;
+$MaximoAnchoTituloTarjetas: 1080px;
+
+
+/*Tarjetas*/
+$AnchoTarjetas: 100%;
+$AlineacionTextoTarjetas: center;
+
+
+/*Imagenes Tarjetas*/
+$AnchoImagenTarjetas: 100%;
+$AltoImagenTarjetas: 291px;
+$TamanoTextoSubtituloTarjeta: 1.5rem;
+
+
+
+
+
 
 
 

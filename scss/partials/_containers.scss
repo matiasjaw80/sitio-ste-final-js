@@ -1,0 +1,38 @@
+/*Contenedores*/
+.container-slide {
+  max-width: 75%;
+  display: flex;
+  margin: auto;
+}
+
+.container-grid {
+  height: 100vh; 
+  display: grid; /*de que forma se visualiza*/
+
+  padding: 1rem; /*Relleno*/
+  height: auto; 
+  
+	grid-column-gap: 1rem; /*espacio entre columnas*/
+  grid-template-columns:  1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+      "Box01  Box02    Box03"
+      "Box01  Box04    Box05";
+}
+
+.container-grid > * {
+  height: auto;
+  display: flex; /*de que forma se visualiza*/
+  
+  justify-content: center; /*Contenido Justificado*/
+  align-items: center; 
+}
+
+.container-card {
+  width: 100%;
+  max-width: 1100px;
+
+  display: flex;
+  margin: auto;
+
+}

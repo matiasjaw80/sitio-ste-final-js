@@ -1,47 +1,13 @@
-
-/*Contenedores*/
-.container-grid {
-  height: 100vh; 
-  display: grid; /*de que forma se visualiza*/
-
-  padding: 1rem; /*Relleno*/
-  height: auto; 
-  
-	grid-column-gap: 1rem; /*espacio entre columnas*/
-  grid-template-columns:  1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas: 
-      "Box01  Box02    Box03"
-      "Box01  Box04    Box05";
-}
-
-.container-grid > * {
-  height: auto;
-  display: flex; /*de que forma se visualiza*/
-  
-  justify-content: center; /*Contenido Justificado*/
-  align-items: center; 
-}
-
-.container-card {
-  width: 100%;
-  max-width: 1100px;
-
-  display: flex;
-  margin: auto;
-
-}
-
 /*Elementos Tarjetas*/
 .title-cards {
-  width: 100%;
-  max-width: 1080px;
+  width: $AnchoTituloTarjetas;
+  max-width: $MaximoAnchoTituloTarjetas;
 
   margin: auto;
   margin-top: 1.2rem;
 
   padding: 1.2rem;
-  text-align: center;
+  text-align: $AlineacionTextoTarjetas;
 
   color: $TituloTarjeta;
 
@@ -50,32 +16,29 @@
   transition-delay: 0s;
   transition-timing-function: cubic-bezier(.73,-0.17,.8,1.44);
 
-  transition: all 1s 0s cubic-bezier(.73,-0.17,.8,1.44);
+  /*transition: all 1s 0s cubic-bezier(.73,-0.17,.8,1.44); pasar parametros todos juntos*/
 
-}
-
-.video{
-  width: 500px;
-  aspect-ratio: 16/9;
-  border-radius: 1rem;
-  align-items: center;
 }
 
 .title-cards:hover {
-  width: 90%;
+  width: $AnchoTituloHoverTarjetas;
   background-color: $FondoHoverTitulo;
-  color: TituloTarjeta;
+  color: $TituloTarjeta;
   border-radius: 1rem;
 }
 
+
+
 .card {
-  width: 100%;
+  width: $AnchoTarjetas;
   margin: 1rem;
 
   background: $FondoTarjeta;
   box-shadow: $SombraTarjeta;
 
-  border-radius: 0.5rem;
+  border-color: $BordeTarjeta;
+  border-top-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
   transition: all 400ms ease-out;
 
   overflow: hidden;
@@ -87,45 +50,46 @@
   }
   
   & img {
-    width: 100%;
-    height: 291px;
-    border-radius: 1.5rem;
+    width: $AnchoImagenTarjetas;
+    height: $AltoImagenTarjetas;
+    border-radius: 1rem;
   }
 
     & .contenido-card {
     padding: 0.8rem;
-    text-align: center;
+    text-align: $AlineacionTextoTarjetas;
 
     & h3 {
       margin-bottom: 1rem;
       color: $SubtituloTarjeta;
       text-shadow: $SombraSubtituloTarjeta;
-      font-size: 1.5rem;
+      font-size: $TamanoTextoSubtituloTarjeta;
     }
 
     & table {
       color: $TextoTablaTarjeta;
-      border-color: $BordesTablaTarjeta;
-      
+      border-color: $BordesTablaTarjeta;      
     }
 
     & p {
       line-height: 1.2rem;
       color: $ParrafoTarjeta;
-      font-size: 1rem;
+      font-size: $TamanoTextotarjtas;
       margin-bottom: 0.2rem;
     }
 
     & a {
       display: inline-block;
       padding: 0.5rem;
+      
       margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+
       text-decoration: none;
       color: $BotonFondoTarjeta;
       border: 1px solid $BotonBordeTarjeta;
       border-radius: 0.8rem;
       transition: all 400ms ease;
-      margin-bottom: 0.5rem;
     }
 
     & a:hover {
@@ -136,9 +100,9 @@
 }
 
 
+
+
 /*Card ciclos*/
-
-
 
 @for $numero from 1 through 5 {
 

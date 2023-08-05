@@ -4,11 +4,16 @@
 /*Colores Menu Mobile*/
 /*Colores Tarjetas */
 /*Colores Tarjetas generadas con Ciclos*/
+/*Otras Variables de Tarjetas*/
+/*Titulos Tarjetas*/
+/*Tarjetas*/
+/*Imagenes Tarjetas*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
+  text-decoration: none;
 }
 
 nav {
@@ -27,7 +32,7 @@ nav ul li a {
   color: #ffffff;
   font-size: 1rem;
   padding: 0.5rem 0.8rem;
-  border-radius: 3px;
+  border-radius: 1.5px;
   text-transform: uppercase;
   text-decoration: none;
 }
@@ -40,7 +45,7 @@ nav ul li a.active, nav ul li a:hover {
 
 .enlace {
   position: absolute;
-  padding: 1rem 2rem;
+  padding: 1rem;
 }
 
 .logo {
@@ -78,18 +83,28 @@ body {
 }
 
 main {
-  gap: rem;
+  gap: 2rem;
   padding: 2rem;
   padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 footer {
   position: fixed;
-  bottom: 0;
   width: 100%;
+  background-image: radial-gradient(circle at right top, rgba(0, 0, 0, 0.0901960784), #212529, #0e3d7a);
+  padding: 0.5rem;
+  bottom: 0;
+  text-decoration: none;
 }
 
 /*Contenedores*/
+.container-slide {
+  max-width: 75%;
+  display: flex;
+  margin: auto;
+}
+
 .container-grid {
   height: 100vh;
   display: grid; /*de que forma se visualiza*/
@@ -128,20 +143,13 @@ footer {
   transition-duration: 1s;
   transition-delay: 0s;
   transition-timing-function: cubic-bezier(0.73, -0.17, 0.8, 1.44);
-  transition: all 1s 0s cubic-bezier(0.73, -0.17, 0.8, 1.44);
-}
-
-.video {
-  width: 500px;
-  aspect-ratio: 16/9;
-  border-radius: 1rem;
-  align-items: center;
+  /*transition: all 1s 0s cubic-bezier(.73,-0.17,.8,1.44); pasar parametros todos juntos*/
 }
 
 .title-cards:hover {
   width: 90%;
   background-color: #001aff;
-  color: TituloTarjeta;
+  color: #fff;
   border-radius: 1rem;
 }
 
@@ -150,7 +158,9 @@ footer {
   margin: 1rem;
   background: #000000;
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 0.5rem;
+  border-color: rgba(9, 238, 9, 0.2039215686);
+  border-top-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
   transition: all 400ms ease-out;
   overflow: hidden;
   cursor: default;
@@ -162,7 +172,7 @@ footer {
 .card img {
   width: 100%;
   height: 291px;
-  border-radius: 1.5rem;
+  border-radius: 1rem;
 }
 .card .contenido-card {
   padding: 0.8rem;
@@ -188,12 +198,12 @@ footer {
   display: inline-block;
   padding: 0.5rem;
   margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   text-decoration: none;
   color: #2fb4cc;
   border: 1px solid #09ee09;
   border-radius: 0.8rem;
   transition: all 400ms ease;
-  margin-bottom: 0.5rem;
 }
 .card .contenido-card a:hover {
   background: #09ee09;
@@ -318,7 +328,7 @@ footer {
   }
   .card img {
     width: 100%;
-    height: 210px;
+    height: 291px;
     text-align: center;
   }
   .container-grid {
@@ -334,7 +344,7 @@ footer {
     left: 0;
   }
   nav {
-    background-image: radial-gradient(circle at right top, rgba(19, 3, 110, 0.8078431373), #212529, #037409);
+    background-image: radial-gradient(circle at right top, #c3ec50, #212529, #037409);
   }
   nav ul {
     position: absolute;

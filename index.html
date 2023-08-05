@@ -5,6 +5,8 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>Servicio Tecnico Especializado</title>
 
+    <link rel="shortcut icon" href="./img/favicon.png">
+
     <meta name="description" content="Servicio Tecnico Especializado de Tecnologia">
     <meta name="keywords" content="Virus, Componentes, Formateo, Recuperacion, Datos, Mantenimiento">
 
@@ -41,80 +43,89 @@
 </header>
 
 <main class="animate__animated animate__pulse">
+    
     <!--   Carrousel-->
-    <div>
-        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="./img/Slide01.jpg" class="d-block w-100" alt="Recuperar Datos">
+    <section>
+        <div class="container-slide">
+            <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                <img src="./img/Slide01.jpg" class="d-block w-100" alt="Recuperar Datos">
+                </div>
+                <div class="carousel-item">
+                <img src="./img/Slide02.jpg" class="d-block w-100" alt="Servicio al Cliente">
+                </div>
+                <div class="carousel-item">
+                <img src="./img/Slide03.jpg" class="d-block w-100" alt="Tecnicos Especializados">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/Slide04.jpg" class="d-block w-100" alt="Call Center">
+                </div>
             </div>
-            <div class="carousel-item">
-              <img src="./img/Slide02.jpg" class="d-block w-100" alt="Servicio al Cliente">
-            </div>
-            <div class="carousel-item">
-              <img src="./img/Slide03.jpg" class="d-block w-100" alt="Tecnicos Especializados">
-            </div>
-            <div class="carousel-item">
-                <img src="./img/Slide04.jpg" class="d-block w-100" alt="Call Center">
-            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-
-    </div>
+    </section>
     <!--   Fin Carrousel-->
 
 
     <!--   Tarjetas-->
-    <div class="title-cards">
-            <h1>Al Servicio de Nuestros Clientes</h1>
-    </div>
-
-    <div class="container-card">
-        <div class="card">
-            <div class="contenido-card">
-                <h3>Compromiso</h3>
-                <figure>
-                    <img src="./img/imagen01.png" alt="Especialista Avatar">
-                </figure>
-                <p>Nuestro compromiso es su tranquilidad Nos preocupamos por brindarles soluciones efectivas a sus necesidades. Creemos firmemente que el avance de su empresa debe ir acompañado de una infraestructura informática segura y escalable. </p>
-                <a href="./pages/Nostros.html">Leer Más</a>
-            </div>
-        </div>
-        <div class="card">
-            <div class="contenido-card">
-                <h3>Servicios</h3>
-                <figure>
-                    <img src="./img/imagen04.png" alt="Especialista">
-                </figure>
-                <p>Todo nuestro trabajo está enfocado en la automatización de procesos que garanticen la estabilidad en el funcionamiento de su sistema y la seguridad en el almacenamiento de sus datos.</p>
-                <a href="./pages/Servicios.html">Leer Más</a>
-            </div>
-        </div>
-        <div class="card">
-
-            <div class="contenido-card">
-                <h3>¿Por qué elegirnos? </h3>
-                <figure>
-                    <img src="./img/imagen03.png" alt="CallCenter">
-                </figure>
-                <p>✓ Somos oportunos en la prestación del servicio, respondiendo de forma rápida en sitio a sus solicitudes y emergencias.</p>
-                <p>✓ Nuestro trabajo es realizado únicamente por profesionales y técnicos calificados. </p>
-                <p>✓ Nos preocupamos realmente por brindarle soluciones que satisfagan todas sus necesidades.</p>
-                <p>✓ Le brindamos nuestro servicio al cliente especializado que va desde la asesoría hasta la entrega del proyecto.</p>
-                <a href="./pages/Contacto.html">Leer Más</a>
-            </div>
+    <section>
+        <div class="title-cards">
+                <h1>Al Servicio de Nuestros Clientes</h1>
         </div>
 
-    </div>
-    <!--Fin   Tarjetas-->
+        <div class="container-card">
+            <div class="card">
+                <div class="contenido-card">
+                    <h3>Compromiso</h3>
+                    <figure>
+                        <img src="./img/imagen01.png" alt="Especialista Avatar">
+                    </figure>
+                    <p>Nuestro compromiso es su tranquilidad Nos preocupamos por brindarles soluciones efectivas a sus necesidades. Creemos firmemente que el avance de su empresa debe ir acompañado de una infraestructura informática segura y escalable. </p>
+                </div>
+                <FooterCard class="contenido-card">
+                    <a href="./pages/Nostros.html">Leer Más</a>
+                </FooterCard>
+            </div>
+            <div class="card">
+                <div class="contenido-card">
+                    <h3>Servicios</h3>
+                    <figure>
+                            <iframe width="300" height="300" src="https://www.youtube.com/embed/P1icq0H_MIg" title="YouTube video player" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </figure>
+                    <p>Todo nuestro trabajo está enfocado en la automatización de procesos que garanticen la estabilidad en el funcionamiento de su sistema y la seguridad en el almacenamiento de sus datos.</p>
+                </div>
+                <FooterCard class="contenido-card">
+                    <a href="./pages/Servicios.html">Leer Más</a>
+                </FooterCard>    
+            </div>
+            <div class="card">
 
+                <div class="contenido-card">
+                    <h3>¿Por qué elegirnos? </h3>
+                    <figure>
+                        <img src="./img/imagen03.png" alt="CallCenter">
+                    </figure>
+                    <p>✓ Somos oportunos en la prestación del servicio, respondiendo de forma rápida en sitio a sus solicitudes y emergencias.</p>
+                    <p>✓ Nuestro trabajo es realizado únicamente por profesionales y técnicos calificados. </p>
+                    <p>✓ Nos preocupamos realmente por brindarle soluciones que satisfagan todas sus necesidades.</p>
+                    <p>✓ Le brindamos nuestro servicio al cliente especializado que va desde la asesoría hasta la entrega del proyecto.</p>
+                </div>
+                <FooterCard class="contenido-card">
+                    <a href="./pages/Contacto.html">Leer Más</a>
+                </FooterCard>
+            </div>
+
+        </div>
+        <!--Fin   Tarjetas-->
+    </section>
 </main>
 
 <div class="BarraLateral slide-top">
@@ -124,7 +135,7 @@
 </div>
 
 <footer>
-    <nav>
+
         <div class="logoredes">
             <a href="https://www.instagram.com/matiasjaw80/" calss="enlace">
                 <img src="./img/redes-instagram.png" alt="logoInstagram" class="logoredes">
@@ -139,7 +150,7 @@
                 <img src="./img/SiteMap.png" alt="logoLinkedin" class="logoredes">
             </a>
         </div>
-    </nav>
+
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
