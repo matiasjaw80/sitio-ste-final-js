@@ -12,12 +12,7 @@ nav {
       margin: 0 0.1rem;
 
       & a {
-        color: $TextoBotonesMenu;
-        font-size: 1rem;
-        padding: 0.5rem 0.8rem;
-        border-radius: 1.5px;
-        text-transform: uppercase;
-        text-decoration: none;
+        @include nav-li-a ($TextoBotonesMenu, 1rem, 0.5rem 0.8rem, 1.5px, uppercase, none); /* $color, $font-size, $padding, $border-radius, $text-transform, $text-decoration */
 
       }
       & a.active, & a:hover {

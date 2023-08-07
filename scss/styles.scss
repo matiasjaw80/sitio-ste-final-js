@@ -1,9 +1,12 @@
-@import "./partials/variables";
 @import "./partials/reset";
-@import "./partials/menu";
+@import "./partials/var_colours";
+@import "./partials/var_measures";
+@import "./partials/mixin";
+@import "./partials/menu_top";
+@import "./partials/menu_foot";
 @import "./partials/skeleton";
 @import "./partials/containers";
 @import "./partials/cards";
-@import "./partials/menupie";
-@import "./partials/barralateral";
+@import "./partials/btn";
+@import "./partials/lateral_bar";
 @import "./partials/mediaquery";

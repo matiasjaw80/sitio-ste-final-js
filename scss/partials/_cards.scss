@@ -55,9 +55,9 @@
     border-radius: 1rem;
   }
 
-    & .contenido-card {
-    padding: 0.8rem;
-    text-align: $AlineacionTextoTarjetas;
+  & .contenido-card {
+  padding: 0.8rem;
+  text-align: $AlineacionTextoTarjetas;
 
     & h3 {
       margin-bottom: 1rem;
@@ -86,19 +86,9 @@
       margin-bottom: 0.5rem;
 
       text-decoration: none;
-      color: $BotonFondoTarjeta;
-      border: 1px solid $BotonBordeTarjeta;
-      border-radius: 0.8rem;
-      transition: all 400ms ease;
-    }
-
-    & a:hover {
-      background: $BotonHoverFondoTarjeta;
-      color: $BotonHoverTextoTarjeta;
     }
   }
 }
-
 
 
 

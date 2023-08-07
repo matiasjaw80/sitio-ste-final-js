@@ -1,13 +1,5 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
-/*Color o Imagen Body*/
-/*Colores Menu */
-/*Colores Menu Mobile*/
-/*Colores Tarjetas */
-/*Colores Tarjetas generadas con Ciclos*/
-/*Otras Variables de Tarjetas*/
-/*Titulos Tarjetas*/
-/*Tarjetas*/
-/*Imagenes Tarjetas*/
 * {
   margin: 0;
   padding: 0;
@@ -16,6 +8,16 @@
   text-decoration: none;
 }
 
+/*Color o Imagen Body*/
+/*Colores Menu */
+/*Colores Menu Mobile*/
+/*Colores Tarjetas */
+/*Colores Tarjetas generadas con Ciclos*/
+/*Tamaños*/
+/*Titulos Tarjetas*/
+/*Tarjetas*/
+/*Imagenes Tarjetas*/
+/*mixin*/
 nav {
   background-image: radial-gradient(circle at right top, rgba(0, 0, 0, 0.0901960784), #212529, #0e3d7a);
 }
@@ -35,6 +37,7 @@ nav ul li a {
   border-radius: 1.5px;
   text-transform: uppercase;
   text-decoration: none;
+  /* $color, $font-size, $padding, $border-radius, $text-transform, $text-decoration */
 }
 nav ul li a.active, nav ul li a:hover {
   color: #ffffff;
@@ -66,20 +69,28 @@ nav ul li a.active, nav ul li a:hover {
   display: none;
 }
 
+.logoredes {
+  height: 3rem;
+}
+.logoredes :hover {
+  transition: 0.5s;
+  transform: scale(1.5, 1.5);
+}
+
 header {
   position: fixed;
-  z-index: 10;
-  height: 4rem;
   width: 100%;
+  height: 4rem;
+  z-index: 10;
 }
 
 body {
+  position: relative;
   --opacidad-negro: 0.5;
   background-color: #212529;
   background-image: radial-gradient(ellipse at top, #212529, transparent), radial-gradient(ellipse at bottom, #000000, transparent);
   background-size: cover;
   background-position: center center;
-  position: relative;
 }
 
 main {
@@ -87,6 +98,7 @@ main {
   padding: 2rem;
   padding-top: 4rem;
   padding-bottom: 4rem;
+  /*gap, padding, padding-top, padding-bottom*/
 }
 
 footer {
@@ -111,8 +123,8 @@ footer {
   padding: 1rem; /*Relleno*/
   height: auto;
   grid-column-gap: 1rem; /*espacio entre columnas*/
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr; /*columnas*/
+  grid-template-rows: 1fr 1fr; /*filas*/
   grid-template-areas: "Box01  Box02    Box03" "Box01  Box04    Box05";
 }
 
@@ -128,6 +140,11 @@ footer {
   max-width: 1100px;
   display: flex;
   margin: auto;
+}
+
+.container-btn {
+  display: grid;
+  justify-content: center;
 }
 
 /*Elementos Tarjetas*/
@@ -200,14 +217,6 @@ footer {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   text-decoration: none;
-  color: #2fb4cc;
-  border: 1px solid #09ee09;
-  border-radius: 0.8rem;
-  transition: all 400ms ease;
-}
-.card .contenido-card a:hover {
-  background: #09ee09;
-  color: #000000;
 }
 
 /*Card ciclos*/
@@ -271,12 +280,38 @@ footer {
   background-color: Color05;
 }
 
-.logoredes {
-  height: 3rem;
+.botones, .btnWhatsapp, .btnLinkedin, .btnFacebook, .btnInstagram {
+  color: #2fb4cc;
+  border: 1px solid #09ee09;
+  border-radius: 0.8rem;
+  transition: all 400ms ease;
+  width: 10rem;
 }
-.logoredes :hover {
+.botones:hover, .btnWhatsapp:hover, .btnLinkedin:hover, .btnFacebook:hover, .btnInstagram:hover {
+  background: #09ee09;
+  color: #000000;
   transition: 0.5s;
-  transform: scale(1.5, 1.5);
+  transform: scale(1.2, 1.2);
+}
+
+.btnInstagram:hover {
+  background: #4e417c;
+  color: #000000;
+}
+
+.btnFacebook:hover {
+  background: rgba(63, 15, 238, 0.9450980392);
+  color: #000000;
+}
+
+.btnLinkedin:hover {
+  background: #5ba2f3;
+  color: #000000;
+}
+
+.btnWhatsapp:hover {
+  background: #13a30e;
+  color: #000000;
 }
 
 .BarraLateral {
@@ -320,11 +355,13 @@ footer {
   main {
     gap: 1rem;
     padding: 1rem;
-    padding-top: 5rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
   .container-card {
     flex-wrap: wrap;
     position: inherit;
+    /*flex-wrap, position*/
   }
   .card img {
     width: 100%;
@@ -335,6 +372,7 @@ footer {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     height: auto;
+    /*grid-template-column, grid-template-rows, height*/
     grid-template-areas: "Box01  Box01   " "Box02  Box03   " "Box04  Box05   ";
   }
   .checkbtn {
@@ -361,20 +399,7 @@ footer {
     display: block;
     margin: 3rem 0;
     line-height: 3rem;
-  }
-  nav ul li a {
-    color: #ffffff;
-    font-size: 1rem;
-    padding: 0.5rem 0.8rem;
-    border-radius: 0.3rem;
-    text-transform: uppercase;
-    text-decoration: none;
-  }
-  nav ul li a.active, nav ul li a:hover {
-    color: #ffffff;
-    background: #0000ff;
-    transition: 1.5s;
-    box-shadow: 10px 10px 30px rgba(96, 248, 7, 0.4588235294);
+    /*display, margin, line-height*/
   }
 }
 @media (max-width: 576px) {
@@ -382,12 +407,13 @@ footer {
     gap: 2rem;
     padding: 0.5rem;
     padding-top: 5rem;
-    padding-left: 0;
+    padding-bottom: 4rem;
   }
   .container-card {
     display: flex;
     flex-wrap: wrap;
     position: inherit;
+    /*flex-wrap, position*/
   }
   .card img {
     display: none;
@@ -396,6 +422,7 @@ footer {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     height: auto;
+    /*grid-template-column, grid-template-rows, height*/
     grid-template-areas: "Box01" "Box02" "Box03" "Box04" "Box05";
   }
   .checkbtn {

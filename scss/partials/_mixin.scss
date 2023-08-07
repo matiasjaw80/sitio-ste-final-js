@@ -1,0 +1,34 @@
+/*mixin*/
+@mixin mainpadding($gap, $padding, $padding-top, $padding-bottom) {
+    gap: $gap;
+    padding: $padding;
+    padding-top: $padding-top;
+    padding-bottom: $padding-bottom;
+}
+
+@mixin containercard($flex-wrap, $position){
+    flex-wrap: wrap;
+    position: inherit;
+
+}
+
+@mixin containergrid($column, $rows, $heigth){
+    grid-template-columns: $column;
+    grid-template-rows: $rows;
+    height: $heigth;
+}
+
+@mixin nav-li ($display, $margin, $line-heigth){
+    display: block;
+    margin: 3rem 0;
+    line-height: 3rem;
+}
+
+@mixin nav-li-a ($color, $font-size, $padding, $border-radius, $text-transform, $text-decoration){
+        color: $color;
+        font-size: $font-size;
+        padding: $padding;
+        border-radius: $border-radius;
+        text-transform: $text-transform;
+        text-decoration: $text-decoration;
+}

@@ -1,0 +1,59 @@
+.botones{
+    color: $BotonFondoTarjeta;
+    border: 1px solid $BotonBordeTarjeta;
+    border-radius: 0.8rem;
+    transition: all 400ms ease;
+    width: 10rem;
+  
+      &:hover {
+        background: $BotonHoverFondoTarjeta;
+        color: $BotonHoverTextoTarjeta;
+        transition: 0.5s;
+        transform: scale(1.2, 1.2);
+      }
+    
+  }
+  
+.btnInstagram{
+
+    @extend .botones;
+  
+    &:hover {
+        background: map-get($coloresBtnRedes , instagram );
+        color: $BotonHoverTextoTarjeta;
+    }
+    
+}
+
+.btnFacebook{
+
+    @extend .botones;
+  
+    &:hover {
+        background: map-get($coloresBtnRedes , facebook );
+        color: $BotonHoverTextoTarjeta;
+    }
+    
+}
+
+.btnLinkedin{
+
+    @extend .botones;
+  
+    &:hover {
+        background: map-get($coloresBtnRedes , linkedin );
+        color: $BotonHoverTextoTarjeta;
+    }
+    
+}
+
+.btnWhatsapp{
+
+    @extend .botones;
+  
+    &:hover {
+        background: map-get($coloresBtnRedes , whatsapp );
+        color: $BotonHoverTextoTarjeta;
+    }
+    
+}
