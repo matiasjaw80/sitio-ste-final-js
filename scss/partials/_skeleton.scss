@@ -11,14 +11,14 @@ body {
     
     --opacidad-negro: 0.5;
     background-color: $FondoBody;
-    background-image: $FondoDegradeBody;
-    background-size: cover;
-    background-position: center center;
+    background-image: $FondoImagenBodyGradient;
+    background-size: contain;
+    background-position: inherit;
 
 }
   
 main {
-    @include mainpadding(2rem, 2rem, 4rem, 4rem); /*gap, padding, padding-top, padding-bottom*/
+    @include mainpadding(2rem, 2rem, 6rem, 4rem); /*gap, padding, padding-top, padding-bottom*/
 }
 
 footer{

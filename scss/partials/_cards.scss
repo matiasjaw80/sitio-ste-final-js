@@ -32,7 +32,15 @@
 .card {
   width: $AnchoTarjetas;
   margin: 1rem;
+
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   padding-bottom: 5rem;
+
+
 
   background: $FondoTarjeta;
   box-shadow: $SombraTarjeta;
@@ -51,6 +59,12 @@
   }
   
   & img {
+    width: $AnchoImagenTarjetas;
+    height: $AltoImagenTarjetas;
+    border-radius: 1rem;
+  }
+
+  & iframe{
     width: $AnchoImagenTarjetas;
     height: $AltoImagenTarjetas;
     border-radius: 1rem;
@@ -78,6 +92,7 @@
       line-height: 1.2rem;
       color: $ParrafoTarjeta;
       font-size: $TamanoTextotarjtas;
+      text-align: justify;
       margin-bottom: 0.2rem;
     }
 

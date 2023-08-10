@@ -2,8 +2,9 @@
 
 /*Color o Imagen Body*/
 $FondoBody: #212529;
-$FondoDegradeBody: radial-gradient(ellipse at top, #212529, transparent), radial-gradient(ellipse at bottom, #000000, transparent);;
-$FondoImagenBody: linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))), url("../img/fondo00.jpeg");
+$FondoDegradeBody: radial-gradient(ellipse at top, #2a2f35, transparent), radial-gradient(ellipse at bottom, #000000, transparent);;
+$FondoImagenBodyGradient: linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))), url("../img/fondo01.jpg");
+$FondoImagenBody: url("../img/fondo01.jpg");
 
 /*Colores Menu */
 $FondoMenu: #00000017;

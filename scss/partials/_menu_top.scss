@@ -1,6 +1,8 @@
 nav {
   background-image: $FondoImagenMenu;
-
+  padding: $paddingNav;
+  justify-content: space-between;
+  align-items: center;
 
   & ul {
   float: right;
