@@ -1,21 +1,21 @@
 [
     {
         "id":"1",
-        "nombre":"Iphone 13",
+        "nombre":"Iphone 15",
         "descripcion": "256 GB",
         "precio": 1000000,
         "foto": "../media/iphone13.jpg"
     },
     {
         "id":"2",
-        "nombre":"Samsung Galaxy S22",
+        "nombre":"Samsung Galaxy S23",
         "descripcion": "128 GB",
         "precio": 800000,
         "foto": "../media/gs22.jpg"
     },
     {
         "id":"3",
-        "nombre":"Xiaomi 12",
+        "nombre":"Xiaomi 13",
         "descripcion": "128 GB",
         "precio": 700000,
         "foto": "../media/xiaomi12.jpg"

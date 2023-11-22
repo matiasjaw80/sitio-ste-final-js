@@ -167,6 +167,7 @@ function calcularTotalCarrito() {
   return total;
 }
 
+
 //reseteo todos los valores una vez finalizada la compra
 function vaciarCarrito() {
   $("#gastoTotal").text("Total: $0");

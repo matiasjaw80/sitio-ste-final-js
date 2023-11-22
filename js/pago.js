@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    
     //subtotal del archivo carrito.js
     $("#subtotal").text(calcularTotalCarrito());
 
