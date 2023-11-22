@@ -12,6 +12,7 @@
 /*Colores Menu */
 /*Colores Menu Mobile*/
 /*Colores Tarjetas */
+/*Colores Tienda*/
 /*Colores Tarjetas generadas con Ciclos*/
 /*Tamaños*/
 /*Menu Nav*/
@@ -132,6 +133,18 @@ footer {
   grid-template-areas: "Box01  Box02    Box03" "Box01  Box04    Box05";
 }
 
+.section-productos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.formato-video {
+  float: left;
+  width: 100%;
+  height: 100%;
+}
+
 .container-grid > * {
   height: auto;
   display: flex; /*de que forma se visualiza*/
@@ -199,6 +212,10 @@ footer {
   width: 100%;
   height: 291px;
   border-radius: 1rem;
+}
+.card img:hover {
+  transition: 0.5s;
+  transform: scale(1.5, 1.5);
 }
 .card iframe {
   width: 100%;
@@ -280,19 +297,19 @@ footer {
 }
 
 .Box-Color01 {
-  background-color: rgba(17, 69, 97, 0.8980392157);
+  background-color: rgba(17, 69, 97, 0.7176470588);
 }
 
 .Box-Color02 {
-  background-color: #3411b4;
+  background-color: rgba(52, 17, 180, 0.8);
 }
 
 .Box-Color03 {
-  background-color: #3bd112;
+  background-color: rgba(59, 209, 18, 0.5411764706);
 }
 
 .Box-Color04 {
-  background-color: #d718e4;
+  background-color: rgba(214, 24, 228, 0.7333333333);
 }
 
 .Box-Color05 {
@@ -353,6 +370,51 @@ footer {
   color: #000000;
 }
 
+/* CARRITO */
+.section-carrito {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+.section-carrito .form-carrito {
+  width: 60%;
+}
+.section-carrito .form-carrito form h2 {
+  font-size: 1.2rem;
+}
+.section-carrito .form-carrito form .botones, .section-carrito .form-carrito form .btnInstagram, .section-carrito .form-carrito form .btnFacebook, .section-carrito .form-carrito form .btnLinkedin, .section-carrito .form-carrito form .btnWhatsapp {
+  width: 100%;
+}
+.section-carrito .form-carrito form .botones:hover, .section-carrito .form-carrito form .btnInstagram:hover, .section-carrito .form-carrito form .btnFacebook:hover, .section-carrito .form-carrito form .btnLinkedin:hover, .section-carrito .form-carrito form .btnWhatsapp:hover {
+  color: #f5f5f5;
+}
+.section-carrito .form-carrito form .error {
+  color: rgb(209, 30, 30);
+  display: none;
+}
+.section-carrito .form-carrito form .pago-tarjeta {
+  display: none;
+}
+.section-carrito .resumen-carrito {
+  width: 60%;
+  margin-bottom: 50px;
+}
+.section-carrito .resumen-carrito table {
+  background-color: rgba(158, 158, 158, 0.137);
+  color: #000100;
+  text-align: center;
+  border-collapse: collapse;
+}
+.section-carrito .resumen-carrito table tr td {
+  font-size: 1.2rem;
+  padding: 15px;
+}
+
 .BarraLateral {
   position: fixed;
   right: 20px;
@@ -407,12 +469,20 @@ footer {
     height: 291px;
     text-align: center;
   }
+  .container-general {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
   .container-grid {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     height: auto;
     /*grid-template-column, grid-template-rows, height*/
     grid-template-areas: "Box01  Box01   " "Box02  Box03   " "Box04  Box05   ";
+  }
+  .container-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
   .checkbtn {
     display: block;
@@ -455,7 +525,7 @@ footer {
     /*flex-wrap, position*/
   }
   .card img {
-    display: none;
+    display: inline-flex;
   }
   .container-grid {
     grid-template-columns: 1fr;
@@ -463,6 +533,11 @@ footer {
     height: auto;
     /*grid-template-column, grid-template-rows, height*/
     grid-template-areas: "Box01" "Box02" "Box03" "Box04" "Box05";
+  }
+  .container-items {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
   }
   .checkbtn {
     display: block;

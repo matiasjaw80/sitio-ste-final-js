@@ -18,6 +18,21 @@
   grid-template-areas: 
       "Box01  Box02    Box03"
       "Box01  Box04    Box05";
+
+ 
+}
+
+
+.section-productos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.formato-video{
+  float: left;
+  width: 100%;
+  height: 100%;
 }
 
 .container-grid > * {
