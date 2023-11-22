@@ -1,14 +1,16 @@
 $(document).ready(function () {
-    //subtotal que viene del archivo carrito.js
+    //subtotal del archivo carrito.js
     $("#subtotal").text(calcularTotalCarrito());
-    //evento para que se modifique el html al cambiar el select sin que haya un error primero
+
+    //evento que modifica html si cambia el select sin que haya un error antes
     $("#metodo-envio").on("change", calcularEnvio);
     $("#metodo-pago").on("change", validarPago);
+
     //funcion para validar el form 
     validarFormulario();
 });
 
-//funcion para validar todos los campos del formulario antes de su envio
+//funcion para validar todos los campos del formu
 function validarFormulario() {
     $("#form-carrito").submit(function (e) {
         if ($("#nombre").val() == "") {
@@ -56,15 +58,18 @@ function validarFormulario() {
         } else if ($("#metodo-envio").val() == "defecto") {
             e.preventDefault();
             $("#error-envio").fadeIn();
-            //como es un select inclui un change que depende de otra funcion y modifica el html
+
+            //select se incluye un change que depende de otra funcion y modifica el html
             $("#metodo-envio").on("change", calcularEnvio);
         } else if ($("#metodo-pago").val() == "defecto") {
             e.preventDefault();
             $("#error-pago").fadeIn();
-            //como es un select inclui un change que depende de otra funcion y modifica el html
+
+            //select se incluye un change que depende de otra funcion y modifica el html
             $("#metodo-pago").on("change", validarPago);
         } else if ($("#metodo-pago").val() == "debito" || $("#metodo-pago").val() == "credito") {
-            //si el medio de pago es tarjeta se suman dos validaciones mas
+            
+            //si es tarjeta se suman dos validaciones mas
             e.preventDefault();
             if (($("#num-tarjeta").val() == "") || ($("#num-tarjeta").val().length != 16)) {
                 e.preventDefault();
@@ -79,10 +84,11 @@ function validarFormulario() {
                     $("#error-codseg").fadeOut();
                 });
             } else {
-                //este else es para cuando el usuario elige tarjeta
+
+                //para cuando se elige tarjeta
                 e.preventDefault();
 
-                //una vez que se validan los datos los guardo en un array
+                //los datos validados se guarda en un array
                 let datosCompra = [];
                 datosCompra.push($("#nombre").val());
                 datosCompra.push($("#email").val());
@@ -96,11 +102,11 @@ function validarFormulario() {
                 datosCompra.push($("#num-tarjeta").val());
                 datosCompra.push($("#cod-seguridad").val());
 
-                //convierto el array a formato JSON para poder subirlo a la API
+                //convertir array a formato JSON
                 let datosCompraJSON = JSON.stringify(datosCompra);
                 enviarDatos(datosCompraJSON);
 
-                //muestro un alert para que el usuario vea que la compra fue exitosa
+                //alert compra fue exitosa
                 Swal.fire({
                     icon: 'success',
                     title: '¡Compra confirmada!',
@@ -111,16 +117,16 @@ function validarFormulario() {
                 //vacio el carrito
                 vaciarCarrito();
 
-                //reseteo los campos de entrada
+                //reseteo de campos
                 $(".entrada-pago").val('');
                 $("#metodo-envio option[value='defecto']").attr("selected", true);
                 $("#metodo-pago option[value='defecto']").attr("selected", true);
             };
         } else {
-            //este else es para cuando el usuario elige efectivo
+            //para cuando el usuario elige efectivo
             e.preventDefault();
 
-            //una vez que se validan los datos los guardo en un array
+            //los datos validados se guarda en un array
             let datosCompra = [];
             datosCompra.push($("#nombre").val());
             datosCompra.push($("#email").val());
@@ -132,11 +138,11 @@ function validarFormulario() {
             datosCompra.push($("#metodo-envio").val());
             datosCompra.push($("#metodo-pago").val());
 
-            //convierto el array a formato JSON para poder subirlo a la API
+            //convertir array a formato JSON
             let datosCompraJSON = JSON.stringify(datosCompra);
             enviarDatos(datosCompraJSON);
 
-            //muestro un alert para que el usuario vea que la compra fue exitosa
+            //alert compra fue exitosa
             Swal.fire({
                 icon: 'success',
                 title: '¡Compra confirmada!',
@@ -147,7 +153,7 @@ function validarFormulario() {
             //vacio el carrito
             vaciarCarrito();
 
-            //reseteo los campos de entrada
+            //reseteo de campos
             $(".entrada-pago").val('');
             $("#metodo-envio option[value='defecto']").attr("selected", true);
             $("#metodo-pago option[value='defecto']").attr("selected", true);
@@ -155,17 +161,17 @@ function validarFormulario() {
     });
 };
 
-//funcion que calcula el costo de envio en funcion de la opcion seleccionada por el usuario
+//fc calcula costo de envio
 function calcularEnvio() {
     let envio;
     let metodoEnvio = $("#metodo-envio").val();
-    if (metodoEnvio == "caba") {
+    if (metodoEnvio == "capital") {
         envio = 800;
         $("#envio").text(envio);
         $("#total").text(calcularTotalCompra(envio));
         $("#error-envio").hide();
     };
-    if (metodoEnvio == "gba") {
+    if (metodoEnvio == "TDF") {
         envio = 1100;
         $("#envio").text(envio);
         $("#total").text(calcularTotalCompra(envio));
@@ -208,6 +214,7 @@ function validarPago() {
         $("#error-codseg").fadeOut();
     };
 };
+
 
 //funcion que resetea todos los valores una vez finalizada la compra 
 function vaciarCarrito() {

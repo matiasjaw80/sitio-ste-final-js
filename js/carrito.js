@@ -1,5 +1,6 @@
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
+
 //variable
 let productosJSON = [];
 let cantidadTotalCompra = carrito.length;
